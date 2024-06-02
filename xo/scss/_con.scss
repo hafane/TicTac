@@ -1,0 +1,41 @@
+@import '_vars';
+
+.wrap {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;  
+    #restart {
+        display: flex;
+        margin: 1rem auto;
+        padding: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: $black;
+        color: $white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: $shadow-lg;
+    }
+}
+
+.container {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+     .btn {
+        background-color: $white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 17vmin;
+        height: 17vmin;
+        cursor: pointer;
+        font-size: 5rem;
+        color: $red-400;
+        box-shadow: $shadow-lg;
+    }
+}
