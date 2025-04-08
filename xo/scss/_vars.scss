@@ -4,10 +4,13 @@ $cyan-400: #22d3ee;
 $black: #000000;
 $white: #ffffff;
 $neutral-500: #737373;
+$neutral-500-20: rgba(115, 115, 115, 0.2);
 $gray-600: #4b5563;
 
 //gradient
 $bg-gradient: linear-gradient(133deg, rgba(216,224,197,1) 0%, rgba(92,113,111,1) 100%);
+
+$bg-shine: linear-gradient(-65deg, $black 0, #fff 10%, $black 60%);
 
 //shadow
 $shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);

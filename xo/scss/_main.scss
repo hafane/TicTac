@@ -1,3 +1,5 @@
+@import '_vars';
+
 * {
     padding: 0;
     margin: 0;
@@ -8,4 +10,12 @@
 body {
     height: 100vh;
     background: $bg-gradient;
+}
+
+.cross {
+    color: $red-400;
+}
+
+.zero {
+    color: $cyan-400;
 }

@@ -1,4 +1,5 @@
 @import '_vars';
+@import '_keyframes';
 
 .popup {
     background: $bg-gradient;
@@ -18,12 +19,37 @@
         color: $white;
     }
     #new {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        gap: 0.5rem;
         border: none;
         border-radius: 0.5rem;
         padding: 1rem;
         font-size: 1rem;
-        background-color: $red-400;
+        background: $black;
         color: $white;
         cursor: pointer;
+
+        .icon {
+            transition: all 0.5s ease-in-out;
+        }
+    
+        .text {
+            font-weight: lighter;
+            transition: all 0.5s ease-in-out;
+        }
+
+        &:hover .icon {
+            transform: translate(45px);
+        }
+
+        &:hover .text {
+            transform: translateX(120px);
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }

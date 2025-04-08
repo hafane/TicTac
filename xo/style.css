@@ -11,6 +11,62 @@ body {
   background: linear-gradient(133deg, rgb(216, 224, 197) 0%, rgb(92, 113, 111) 100%);
 }
 
+.cross {
+  color: #f87171;
+}
+
+.zero {
+  color: #22d3ee;
+}
+
+header .head__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+header .head__wrap #title__container {
+  position: relative;
+  overflow: hidden;
+}
+header .head__wrap #title__container .head__title {
+  color: #737373;
+}
+header .head__wrap #title__container .symbol {
+  position: absolute;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: lighter;
+  -webkit-animation: appear 4s linear;
+          animation: appear 4s linear;
+}
+header .head__wrap .head__author {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+header .head__wrap .head__author .author__link {
+  display: inherit;
+  text-decoration: none;
+  padding: 2px 4px;
+  gap: 2px;
+  background: #000000;
+  border-radius: 3px;
+}
+header .head__wrap .head__author .author__link p {
+  color: #ffffff;
+}
+
 .wrap {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
@@ -26,13 +82,41 @@ body {
   margin: 1rem auto;
   padding: 1rem;
   border: none;
+  overflow: hidden;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 0.5rem;
   background-color: #000000;
   color: #ffffff;
   font-size: 1.5rem;
   cursor: pointer;
-  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.wrap #restart .icon {
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.wrap #restart .text {
+  font-weight: lighter;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.wrap #restart:hover .icon {
+  -webkit-transform: translateX(45px);
+      -ms-transform: translateX(45px);
+          transform: translateX(45px);
+}
+.wrap #restart:hover .text {
+  -webkit-transform: translateX(120px);
+      -ms-transform: translateX(120px);
+          transform: translateX(120px);
+}
+.wrap #restart:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .container {
@@ -59,11 +143,39 @@ body {
   height: 17vmin;
   cursor: pointer;
   font-size: 5rem;
-  color: #f87171;
   -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
+@-webkit-keyframes appear {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    top: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    top: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
 .popup {
   background: linear-gradient(133deg, rgb(216, 224, 197) 0%, rgb(92, 113, 111) 100%);
   display: -webkit-box;
@@ -92,11 +204,58 @@ body {
   color: #ffffff;
 }
 .popup #new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  gap: 0.5rem;
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
   font-size: 1rem;
-  background-color: #f87171;
+  background: #000000;
   color: #ffffff;
   cursor: pointer;
+}
+.popup #new .icon {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.popup #new .text {
+  font-weight: lighter;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.popup #new:hover .icon {
+  -webkit-transform: translate(45px);
+      -ms-transform: translate(45px);
+          transform: translate(45px);
+}
+.popup #new:hover .text {
+  -webkit-transform: translateX(120px);
+      -ms-transform: translateX(120px);
+          transform: translateX(120px);
+}
+.popup #new:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@keyframes appear {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    top: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
 }

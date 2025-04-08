@@ -22,6 +22,7 @@ export function ticTac(btns, restartBtn, popupCon, popuptext, newGameBtn) {
         btns.forEach(element => {
             element.innerText = ''
             element.disabled = false
+            element.classList.remove("cross", "zero")
         })
         popupCon.classList.add('hide')
     }
@@ -61,10 +62,12 @@ export function ticTac(btns, restartBtn, popupCon, popuptext, newGameBtn) {
             if(xTurn) {
                 xTurn = false
                 element.textContent = 'X'
+                element.classList.add("cross")
                 element.disabled = true
             } else {
                 xTurn = true
                 element.textContent = 'O'
+                element.classList.add("zero")
                 element.disabled = true
             }
 
